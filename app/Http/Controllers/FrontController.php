@@ -19,4 +19,8 @@ class FrontController extends Controller
         $related_items = Item::where('category_id', $categoryID)->where('id', '!=', $id)->orderBy('id', 'DESC')->limit(4)->get();
         return view('front.detail' , compact('item' , 'related_items'));
     }
+    public function itemCategory($category_id){
+        $items = Item::where('category_id', $category_id)->orderBy('id','DESC')->paginate(8);
+        return view('front.item-category', compact('items'));
+    }
 }

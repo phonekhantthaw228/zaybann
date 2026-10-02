@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
+        <title>ဈေးဗန်း - Shop in one place</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -31,7 +31,7 @@
                                 @endphp
 
                                 @foreach($categories as $category)
-                                <li><a class="dropdown-item" href="#!">{{$category->name}}</a></li>
+                                <li><a class="dropdown-item" href="{{route('items.category', $category->id)}}">{{$category->name}}</a></li>
                                 @endforeach
                             </ul>
                               

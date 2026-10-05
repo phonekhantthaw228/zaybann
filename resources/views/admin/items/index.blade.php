@@ -4,7 +4,7 @@
                     <div class="container-fluid px-4">
                         <div class="my-3">
                             <h1 class="mt-4 d-inline">Items</h1>
-                            <a href="" class="btn btn-primary float-end">Create Item</a>
+                            <a href="{{route('admin.items.create')}}" class="btn btn-primary float-end">Create Item</a>
                         </div>
                         
                         <ol class="breadcrumb mb-4">
@@ -53,7 +53,7 @@
                                                 <td>{{$item->name}}</td>
                                                 <td>{{$item->price}}</td>
                                                 <td>{{$item->in_stock}}</td>
-                                                <td>{{$item->category_id}}</td>
+                                                <td>{{$item->category->name}}</td>
                                             </tr>
                                         @endforeach
 
